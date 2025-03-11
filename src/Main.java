@@ -42,5 +42,23 @@ public class Main {
          * */
         Arrays.sort(numbers2);
         System.out.println("After sorting "+Arrays.toString(numbers2));
+
+        /**
+         * @MultidemensionsArrays
+         * @NOTE**
+         *      THE Arrays.toString() method is not possible when working with Multidimensional Arrays
+         *      To print it out you need to use
+         * @Arrays.deepToString()
+         * @ex
+         * System.out.println(Arrays.deepToString(matrix));
+         *
+         * @Decalre Multidimensional Arrays by normal means
+         * int[][] matrix =new int[2][3];
+         * @Decalre Multidimensional Arrays with {}
+         * int[][] matrix ={{1,2,3},{1,2,3}};
+         *
+         * */
+        int[][] matrix =new int[2][3];
+        System.out.println(Arrays.deepToString(matrix));
     }
 }
