@@ -60,5 +60,23 @@ public class Main {
          * */
         int[][] matrix =new int[2][3];
         System.out.println(Arrays.deepToString(matrix));
+
+        /**
+         * @NOTE
+         *      To declare a constant you need to use the keyword
+         * @final which mean finalize
+         * @e.g
+         *      final byte number = 1
+         *
+         * */
+        final byte number=1;
+        /**
+         * @Assign
+         *      If you try to assign the new value to the final
+         *      variable it will show the compilation error
+         *
+         * @Cannot assign a value to final variable '<variable_name>'
+         * */
+        System.out.println(number);
     }
 }
