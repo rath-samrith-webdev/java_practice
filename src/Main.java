@@ -136,5 +136,21 @@ public class Main {
         int x = 1;
         x++;
         System.out.println("compound assignment operator "+x);
+
+
+        /**
+         * @NOTE
+         * MULTIPLICATION AND DIVISION OPERATOR ARE PRIORITIZE AND WILL EXECUTE FIRST
+         * @ORDER
+         * @1.()
+         * @2.* /
+         * @3.+ -
+         * */
+        int operator = 10 + 3 *2; // result is 16
+        int operator2 = (10 + 3) * 2; // result is 26
+        int operator3 = 10 + 3 -3; // result is 10
+        System.out.println("compound assignment operator3 "+operator3);
+        System.out.println("compound assignment operator2 "+operator2);
+        System.out.println("compound assignment operator1 "+operator);
     }
 }
