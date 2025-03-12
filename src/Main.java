@@ -152,5 +152,25 @@ public class Main {
         System.out.println("compound assignment operator3 "+operator3);
         System.out.println("compound assignment operator2 "+operator2);
         System.out.println("compound assignment operator1 "+operator);
+
+        /**
+         * @NOTE
+         * @IMPLICIT_CASTING
+         * byte->short->int->long->float->double (Automatic casting)
+         * @EXPLICIT_CASTING
+         * @NOTE:
+         *      The type which can be explicitly cast must be compatible with each other
+         *      You cannot cast string to integer
+         *      To accomplish that you need to use parser from @Integer is a wrapper class
+         * @ex
+         * x="1"
+         * y = Integer.parseInt(x) + 1
+         * @Integer.parseInt(x) will convert string into number
+         * @All_Types has a wrapper in JAVA
+         * */
+        String x1 = "1.2";
+        double y1 = Double.parseDouble(x1) +2;
+        System.out.println(y1);
+
     }
 }
