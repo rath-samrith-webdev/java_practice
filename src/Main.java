@@ -1,5 +1,6 @@
 import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -200,5 +201,17 @@ public class Main {
         System.out.println(res);
         System.out.println(resINpecent);
 
+        /**
+         * @To read input we use scanner
+         * @scanner.nextLine() and scanner.next() return string but the next() method return one word if there's spaces 
+         * @scanner.nextInt() returns integer
+         * 
+         */
+      
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Name");
+            String resultInput = scanner.nextLine();
+            System.out.println("I am "+ resultInput);
+        }
     }
 }
