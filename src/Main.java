@@ -172,5 +172,11 @@ public class Main {
         double y1 = Double.parseDouble(x1) +2;
         System.out.println(y1);
 
+        /**
+         * @Math Class is already exist in most classes
+         */
+        int result = (int)Math.ceil(1.1F);
+        System.out.println(result);
+
     }
 }
