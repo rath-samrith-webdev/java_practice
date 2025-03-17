@@ -1,5 +1,217 @@
+import java.text.NumberFormat;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+
+        /**
+         * @Note
+         *      to declare an array of any type you need to put the reserve key then []
+         * @ex
+         * int[]
+         * String[]
+         * float[]
+         *      You can set a new variable of an array to something of the its default value by
+         *      declaring a new class with number of length as its initializer
+         * @e.g
+         * int[] testNumbers = new int[4]
+         *
+         * @Note2
+         *      If you print out the array directly @Java will only print the address of the array inside memory
+         *      To print it you Need to convert It into string first
+         *      The Arrays.toString() returns string
+         * @ex
+         *         int[] numbers = new int[5];
+         *         numbers[0] = 1;
+         *         numbers[1] = 2;
+         *         System.out.println(Arrays.toString(numbers));
+         * */
+        int[] numbers = new int[5];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        System.out.println(Arrays.toString(numbers));
+        /**
+         * @NOTE
+         *      Above is the older ways to declare
+         * @Remember!!
+         * @Array has a fixed (size) length and can never be removed
+         * */
+        int[] numbers2 = {3,2,1,4,5};
+        System.out.println("Before sorting"+Arrays.toString(numbers2));
+        /**
+         * @Sorting
+         * */
+        Arrays.sort(numbers2);
+        System.out.println("After sorting "+Arrays.toString(numbers2));
+
+        /**
+         * @MultidemensionsArrays
+         * @NOTE**
+         *      THE Arrays.toString() method is not possible when working with Multidimensional Arrays
+         *      To print it out you need to use
+         * @Arrays.deepToString()
+         * @ex
+         * System.out.println(Arrays.deepToString(matrix));
+         *
+         * @Decalre Multidimensional Arrays by normal means
+         * int[][] matrix =new int[2][3];
+         * @Decalre Multidimensional Arrays with {}
+         * int[][] matrix ={{1,2,3},{1,2,3}};
+         *
+         * */
+        int[][] matrix =new int[2][3];
+        System.out.println(Arrays.deepToString(matrix));
+
+        /**
+         * @NOTE
+         *      To declare a constant you need to use the keyword
+         * @final which mean finalize
+         * @e.g
+         *      final byte number = 1
+         *
+         * */
+        final byte number=1;
+        /**
+         * @Assign
+         *      If you try to assign the new value to the final
+         *      variable it will show the compilation error
+         *
+         * @Cannot assign a value to final variable '<variable_name>'
+         * */
+        System.out.println(number);
+
+        /**
+         * @Arithmethic-Expression
+         * @Arithmethic-Expressions consists of
+         * @+ Addition
+         * @- Subtraction
+         * @/ Division
+         * @% Modular is to get the remains of Division
+         * @* Multiplication
+         * */
+        int ten = 10+1;
+        System.out.println("@Arithmethic-Expression "+ ten);
+
+
+        /**
+         * @NOTE
+         * @Division of a whole numbers result is a whole number.
+         *
+         * @NOTE
+         * To get the floating numbers you need to case it <Operate>
+         * @ex
+         * int ten = 10/3 the result will be a whole number 3
+         * <type> ten = (type)10/(type)3
+         * */
+        int results = 10/3;
+        System.out.println(results);
+        double resultsD = (double)10/(double) 3;
+        System.out.println(resultsD);
+
+        /**
+         * @NOTE
+         * normally you would
+         * use x++
+         * THE + Operator has different uses
+         * @1
+         * if you use ++x x will be incremented by 1
+         * the result is 2
+         * @ex
+         * x=1
+         * y=++x this will first increment x by 1 and then assign it to y
+         * @2
+         * if you use x++ x will first copied and assigned to the variable (if you declare if not there's no problem)
+         * @ex
+         * x = 1
+         * y = x++ this will first set y to 1 and the increment x
+         *
+         * @NOTE
+         * In case you want to use it with number different from 1
+         * @eg
+         * x+=2
+         * x-=2
+         * x/=2
+         * x*=2
+         * this above is called compound assignment operator
+         * */
+        int x = 1;
+        x++;
+        System.out.println("compound assignment operator "+x);
+
+
+        /**
+         * @NOTE
+         * MULTIPLICATION AND DIVISION OPERATOR ARE PRIORITIZE AND WILL EXECUTE FIRST
+         * @ORDER
+         * @1.()
+         * @2.* /
+         * @3.+ -
+         * */
+        int operator = 10 + 3 *2; // result is 16
+        int operator2 = (10 + 3) * 2; // result is 26
+        int operator3 = 10 + 3 -3; // result is 10
+        System.out.println("compound assignment operator3 "+operator3);
+        System.out.println("compound assignment operator2 "+operator2);
+        System.out.println("compound assignment operator1 "+operator);
+
+        /**
+         * @NOTE
+         * @IMPLICIT_CASTING
+         * byte->short->int->long->float->double (Automatic casting)
+         * @EXPLICIT_CASTING
+         * @NOTE:
+         *      The type which can be explicitly cast must be compatible with each other
+         *      You cannot cast string to integer
+         *      To accomplish that you need to use parser from @Integer is a wrapper class
+         * @ex
+         * x="1"
+         * y = Integer.parseInt(x) + 1
+         * @Integer.parseInt(x) will convert string into number
+         * @All_Types has a wrapper in JAVA
+         * */
+        String x1 = "1.2";
+        double y1 = Double.parseDouble(x1) +2;
+        System.out.println(y1);
+
+        /**
+         * @Math Class is already exist in most classes
+         * 
+         * @Math.round //Round a float to a integer (a whole number)/ take a float and return a long
+         * @Math.floor // Return the largest integer that is smaller or equalt to the given number
+         * @Math.ciel ==> return the smallest integer that is greater than or equal the current iteger
+         * @Math.max ==> return the greater of the two value
+         * @Math.min ==> return the lesser of the two value
+         * @Math.random ==> return the random betwen 0 and one 
+         * 
+         */
+        int result = (int)Math.ceil(1.1F);
+        System.out.println(result);
+
+
+        /**
+         * @Number format
+         * @NumberFormat.getCurrencyInstance() ==> Get the currency format ex: $123,12
+         * @NumberFormat.getPercentInstance() ==> Get the percentage format ex: $123,12
+         */
+        NumberFormat currentcy= NumberFormat.getCurrencyInstance();
+        NumberFormat percentage = NumberFormat.getPercentInstance();
+        String res =currentcy.format(12312.323);
+        String resINpecent =percentage.format(12.2);
+        System.out.println(res);
+        System.out.println(resINpecent);
+
+        /**
+         * @To read input we use scanner
+         * @scanner.nextLine() and scanner.next() return string but the next() method return one word if there's spaces 
+         * @scanner.nextInt() returns integer
+         * 
+         */
+      
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Name");
+            String resultInput = scanner.nextLine();
+            System.out.println("I am "+ resultInput);
+        }
     }
 }
